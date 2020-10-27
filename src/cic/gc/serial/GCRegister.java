@@ -5,6 +5,9 @@
  */
 package cic.gc.serial;
 
+import cic.gc.util.Repo;
+import cic.gc.util.TcpRegister;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.ToString;
 
@@ -15,12 +18,39 @@ import lombok.ToString;
 @Data
 @ToString
 public class GCRegister {
+
     // json properties
     private int registerNo;
     private String registerName;
-    private int tcpRegisterNo = -1; 
+    private int tcpRegisterNo = -1;
     private boolean tcpWritable = false;
-    
+
     // other properties
-    private int value;
+    @JsonIgnore
+    private int registerValue;
+    @JsonIgnore
+    private GCDevice device;
+    @JsonIgnore
+    TcpRegister tcpRegister = null;
+
+    void setDevice(GCDevice device) {
+        this.device = device;
+    }
+
+    void init() {
+        // create a tcp register and add that to tcp repository
+        if (tcpRegisterNo != -1) {
+            tcpRegister = new TcpRegister(this);
+            Repo.create().getSpi().setRegister(tcpRegisterNo, tcpRegister);
+        }
+    }
+
+    public void setRegisterValue(int value) {
+        if (tcpRegister != null) {
+            
+            tcpRegister.setValue(value, false);
+        }
+        
+        this.registerValue = value;
+    }
 }

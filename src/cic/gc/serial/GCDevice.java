@@ -6,10 +6,11 @@
 package cic.gc.serial;
 
 import cic.gc.util.GCReadRequestCaller;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Timer;
-import java.util.TimerTask;
-import javafx.collections.ObservableList;
-import javafx.collections.ObservableMap;
 import lombok.Data;
 import lombok.ToString;
 import net.wimpi.modbus.msg.ReadMultipleRegistersResponse;
@@ -24,22 +25,31 @@ public class GCDevice implements GCReadRequestCaller {
     // json properties
     private String deviceName;
     private int slaveAddress;
-    private ObservableList<GCRegister> deviceFields;
-    private ObservableList<GCFetcher> deviceFetchers;
+    private List<GCRegister> deviceFields;
+    private List<GCFetcher> deviceFetchers;
 
     // other properties
+    @JsonIgnore
     private GCBus bus = null;
-    private ObservableMap<Integer, GCRegister> registers;
+    @JsonIgnore
+    private Map<Integer, GCRegister> registers = new HashMap<>();
     
     @Override
-    public void processReadResponse(ReadMultipleRegistersResponse response) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void processReadResponse(ReadMultipleRegistersResponse response, int ref, int count) {
+        for(int i = 0; i < count; i ++){
+            GCRegister gr = registers.get(ref + i);
+            gr.setRegisterValue(response.getRegisterValue(i));
+            //registers.put(ref + i, gr);
+        }
     }
 
     void init(GCBus gcBus) {
+        System.out.println("*** Initializing Device...");
         bus = gcBus;
         // Initialize the registers map
         for(GCRegister gr:deviceFields){
+            gr.setDevice(this);
+            gr.init();
             registers.put(gr.getRegisterNo(), gr);
         }
         // Initialize all fetchers

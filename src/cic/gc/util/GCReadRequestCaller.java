@@ -12,5 +12,5 @@ import net.wimpi.modbus.msg.ReadMultipleRegistersResponse;
  * @author prera
  */
 public interface GCReadRequestCaller {
-    void processReadResponse(ReadMultipleRegistersResponse response);
+    void processReadResponse(ReadMultipleRegistersResponse response, int ref, int count);
 }

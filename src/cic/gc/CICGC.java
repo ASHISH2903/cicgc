@@ -6,6 +6,7 @@
 package cic.gc;
 
 import cic.gc.serial.GCBus;
+import cic.gc.util.Repo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
@@ -30,13 +31,19 @@ public class CICGC {
             path += File.separator;
             path += Config.argValues.get("busconfig");
             ObjectMapper mapper = new ObjectMapper();
-            ArrayList<GCBus> lstGcBus = new ArrayList<>();
-            lstGcBus = mapper.readValue(new File(path), lstGcBus.getClass());
-            for(int i = 0; i < lstGcBus.size(); i ++){
+            GCBus buses[];
+            
+            buses = mapper.readValue(new File(path), GCBus[].class);
+            for(int i = 0; i < buses.length; i ++){
                 System.out.println("..............................." + i + "...............");
-                System.out.println(lstGcBus.get(i));
-                lstGcBus.get(i).init();
+                System.out.println(buses[i]);
+
+                GCBus bus = buses[i];
+                bus.init();
             }
+            System.out.println("Will start TCP server");
+            // run the tcp server only after the tcp registers are innitialized
+            Repo.create().getTcpServer();
         } catch (IOException ex) {
             Logger.getLogger(CICGC.class.getName()).log(Level.SEVERE, null, ex);
         }

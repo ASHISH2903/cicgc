@@ -16,6 +16,8 @@
 
 package net.wimpi.modbus.procimg;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Interface defining a register.
  * <p>
@@ -44,6 +46,7 @@ public interface Register
    *
    * @param s the value as <tt>short</tt>.
    */
+  @JsonIgnore
   public void setValue(short s);
 
   /**

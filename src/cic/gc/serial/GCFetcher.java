@@ -38,6 +38,6 @@ public class GCFetcher {
                 rr.setSlaveId(device.getSlaveAddress());
                 device.getBus().addReadRequest(rr);
             }
-        }, 0, fetchPeriod);
+        }, 0, fetchPeriod * 1000);
     }
 }

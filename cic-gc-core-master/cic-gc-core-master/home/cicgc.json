@@ -1,0 +1,155 @@
+[
+    {
+        "busName": "dtc",
+        "portName": "/dev/ttyUSB0",
+        "baudRate": 19200,
+        "dataBits": 8,
+        "stopBits": 1,
+        "parity": "none",
+        "readQueueProcessTime": 30,
+        "writeQueueProcessTime": 1,
+        "devices": [
+            {
+                "deviceName": "dtc1",
+                "slaveAddress": 3,
+                "deviceFields": [
+                    
+                            {
+                                "registerNo": 4096,
+                                "registerName": "Process Value",
+                                "tcpRegisterNo": 1,
+                                "tcpWritable": false
+                            },
+                            {
+                                "registerNo": 4097,
+                                "registerName": "Set Point",
+                                "tcpRegisterNo": 2,
+                                "tcpWritable": true
+                            },
+                            {
+                                "registerNo": 4098,
+								"registerName": "Upper Limit Of Temp Range"
+                            },
+                            {
+                                "registerNo": 4099,
+                                "registerName": "Lower Limit Of Temp Range"
+                            },
+                            {
+                                "registerNo": 4100,
+                                "registerName": "Input Temperature Sensor Type"
+                            },
+                            {
+                                "registerNo": 4101,
+                                "registerName": "Control Method"
+                            },
+                            {
+                                "registerNo": 4102,
+                                "registerName": "1st Group Of Heating/Cooling Control Cycle"
+                            },
+                            {
+                                "registerNo": 4103,
+                                "registerName": "2nd Group Of Heating/Cooling Control Cycle"
+                            }
+                     
+                ],
+                "deviceFetchers": [
+					{
+                            "referenceNo": 4096,
+                            "totalCount": 2,
+                            "fetchPeriod": 50
+                    }
+                ]
+            },
+            {
+                "deviceName": "dtc2",
+                "slaveAddress": 4,
+                "deviceFields": [
+
+                            {
+                                "registerNo": 4096,
+                                "registerName": "Process Value",
+                                "tcpRegisterNo": 3,
+                                "tcpWritable": false
+                            },
+                            {
+                                "registerNo": 4097,
+                                "registerName": "Set Point",
+                                "tcpRegisterNo": 4,
+                                "tcpWritable": true
+                            },
+                            {
+                                "registerNo": 4098,
+                                "registerName": "Upper Limit Of Temp Range"
+                            },
+                            {
+                                "registerNo": 4099,
+                                "registerName": "Lower Limit Of Temp Range"
+                            },
+                            {
+                                "registerNo": 4100,
+                                "registerName": "Input Temperature Sensor Type"
+                            },
+                            {
+                                "registerNo": 4101,
+                                "registerName": "Control Method"
+                            },
+                            {
+                                "registerNo": 4102,
+                                "registerName": "1st Group Of Heating/Cooling Control Cycle"
+                            },
+                            {
+                                "registerNo": 4103,
+                                "registerName": "2nd Group Of Heating/Cooling Control Cycle"
+                            }
+                    
+                ],
+                "deviceFetchers": [
+					{
+                            "referenceNo": 4096,
+                            "totalCount": 2,
+                            "fetchPeriod": 50
+                    }
+                ]
+            }
+        ]
+    },{
+        "busName": "isaw",
+        "portName": "/dev/ttyUSB1",
+        "baudRate": 9600,
+        "dataBits": 8,
+        "stopBits": 1,
+        "parity": "none",
+        "readQueueProcessTime": 30,
+        "writeQueueProcessTime": 1,
+        "devices": [
+            {
+                "deviceName": "isaw1",
+                "slaveAddress": 1,
+                "deviceFields": [
+                
+                            {
+                                "registerNo": 418,
+                                "registerName": "Temp 1",
+                                "tcpRegisterNo": 5,
+                                "tcpWritable": true
+                            },
+                            {
+                                "registerNo": 419,
+                                "registerName": "Temp 2",
+                                "tcpRegisterNo": 6,
+                                "tcpWritable": true
+                            }
+                    
+                ],
+                "deviceFetchers": [
+                    {
+                            "referenceNo": 418,
+                            "totalCount": 1,
+                            "fetchPeriod": 45
+                    
+                    }
+                ]
+            }
+        ]
+    }
+]

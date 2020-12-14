@@ -52,9 +52,9 @@ public class MBTcpServer {
         } catch (UnknownHostException ex) {
             Logger.getLogger(MBTcpServer.class.getName()).log(Level.SEVERE, null, ex);
         } catch (FileNotFoundException ex) {
-            System.out.println("Hello World");
             Logger.getLogger(MBTcpServer.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
+            System.out.println("TCP IP IO EXCEPTION");
             Logger.getLogger(MBTcpServer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

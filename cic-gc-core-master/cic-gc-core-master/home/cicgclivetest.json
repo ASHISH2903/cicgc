@@ -1,0 +1,189 @@
+[{
+	"busName": "dtc",
+	"portName": "/dev/ttyUSB0",
+	"baudRate": 9600,
+	"dataBits": 8,
+	"stopBits": 1,
+	"parity": "odd",
+	"readQueueProcessTime": 30,
+	"writeQueueProcessTime": 1,
+	"devices": [{
+			"deviceName": "dtc1",
+			"slaveAddress": 1,
+			"deviceFields": [{
+					"registerNo": 4096,
+					"registerName": "Process Value",
+					"tcpRegisterNo": 0,
+					"tcpWritable": false
+				},
+				{
+					"registerNo": 4097,
+					"registerName": "Set Point",
+					"tcpRegisterNo": 1,
+					"tcpWritable": true
+				}
+			],
+			"deviceFetchers": [{
+				"referenceNo": 4096,
+				"totalCount": 2,
+				"fetchPeriod": 50
+			}]
+		},
+		{
+			"deviceName": "dtc2",
+			"slaveAddress": 2,
+			"deviceFields": [
+
+				{
+					"registerNo": 4096,
+					"registerName": "Process Value",
+					"tcpRegisterNo": 2,
+					"tcpWritable": false
+				},
+				{
+					"registerNo": 4097,
+					"registerName": "Set Point",
+					"tcpRegisterNo": 3,
+					"tcpWritable": true
+				}
+			],
+			"deviceFetchers": [{
+				"referenceNo": 4096,
+				"totalCount": 2,
+				"fetchPeriod": 50
+			}]
+		},
+		{
+			"deviceName": "dtc3",
+			"slaveAddress": 3,
+			"deviceFields": [{
+					"registerNo": 4096,
+					"registerName": "Process Value",
+					"tcpRegisterNo": 4,
+					"tcpWritable": false
+				},
+				{
+					"registerNo": 4097,
+					"registerName": "Set Point",
+					"tcpRegisterNo": 5,
+					"tcpWritable": true
+				}
+			],
+			"deviceFetchers": [{
+				"referenceNo": 4096,
+				"totalCount": 2,
+				"fetchPeriod": 50
+			}]
+		},
+		{
+			"deviceName": "dtc4",
+			"slaveAddress": 4,
+			"deviceFields": [{
+					"registerNo": 4096,
+					"registerName": "Process Value",
+					"tcpRegisterNo": 6,
+					"tcpWritable": false
+				},
+				{
+					"registerNo": 4097,
+					"registerName": "Set Point",
+					"tcpRegisterNo": 7,
+					"tcpWritable": true
+				}
+			],
+			"deviceFetchers": [{
+				"referenceNo": 4096,
+				"totalCount": 2,
+				"fetchPeriod": 50
+			}]
+		}
+	]
+}, {
+	"busName": "epc",
+	"portName": "/dev/ttyUSB1",
+	"baudRate": 9600,
+	"dataBits": 8,
+	"stopBits": 1,
+	"parity": "none",
+	"readQueueProcessTime": 30,
+	"writeQueueProcessTime": 1,
+	"devices": [{
+			"deviceName": "epc",
+			"slaveAddress": 25,
+			"deviceFields": [{
+					"registerNo": 0,
+					"registerName": "Process Value 0",
+					"tcpRegisterNo": 8,
+					"tcpWritable": false
+				},
+				{
+					"registerNo": 1,
+					"registerName": "Process Value 1",
+					"tcpRegisterNo": 10,
+					"tcpWritable": false
+				},
+				{
+					"registerNo": 2,
+					"registerName": "Process Value 2",
+					"tcpRegisterNo": 12,
+					"tcpWritable": false
+				},
+				{
+					"registerNo": 8,
+					"registerName": "Set Value 0",
+					"tcpRegisterNo": 9,
+					"tcpWritable": true
+				},
+				{
+					"registerNo": 9,
+					"registerName": "Set Value 1",
+					"tcpRegisterNo": 11,
+					"tcpWritable": true
+				},
+				{
+					"registerNo": 10,
+					"registerName": "Set Value 2",
+					"tcpRegisterNo": 13,
+					"tcpWritable": true
+				}
+			],
+			"deviceFetchers": [{
+				"referenceNo": 0,
+				"totalCount": 3,
+				"fetchPeriod": 45
+			}, {
+				"referenceNo": 8,
+				"totalCount": 3,
+				"fetchPeriod": 45
+			}]
+		},
+		{
+			"deviceName": "fid",
+			"slaveAddress": 15,
+			"deviceFields": [{
+					"registerNo": 0,
+					"registerName": "Fid 1",
+					"tcpRegisterNo": 14,
+					"tcpWritable": false
+				},
+				{
+					"registerNo": 1,
+					"registerName": "Fid 2",
+					"tcpRegisterNo": 15,
+					"tcpWritable": true
+				},
+				{
+					"registerNo": 2,
+					"registerName": "Fid 3",
+					"tcpRegisterNo": 16,
+					"tcpWritable": true
+				}
+			],
+			"deviceFetchers": [{
+				"referenceNo": 0,
+				"totalCount": 2,
+				"fetchPeriod": 50
+			}]
+		}
+	]
+}]

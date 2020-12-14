@@ -36,7 +36,7 @@ public class GCDevice implements GCReadRequestCaller {
     
     @Override
     public void processReadResponse(ReadMultipleRegistersResponse response, int ref, int count) {
-        for(int i = 0; i < count; i ++){
+        for(int i = 0; i < response.getWordCount(); i ++){
             GCRegister gr = registers.get(ref + i);
             gr.setRegisterValue(response.getRegisterValue(i));
             //registers.put(ref + i, gr);

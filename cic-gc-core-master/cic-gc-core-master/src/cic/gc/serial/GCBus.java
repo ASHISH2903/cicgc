@@ -144,9 +144,11 @@ public class GCBus {
 
     private class ReadQueueTask extends TimerTask {
 
+        GCReadRequest rr;
+
         @Override
         public void run() {
-            
+
             if (con == null) {
                 return;
             }
@@ -158,7 +160,7 @@ public class GCBus {
                         Thread.sleep(10);
                     }
                     lock = false;
-                    GCReadRequest rr = readQueue.take();
+                    rr = readQueue.take();
                     ReadMultipleRegistersRequest rmrr = new ReadMultipleRegistersRequest(rr.getReference(), rr.getCount());
                     rmrr.setHeadless();
                     rmrr.setUnitID(rr.getSlaveId());
@@ -169,11 +171,9 @@ public class GCBus {
                     ReadMultipleRegistersResponse res = (ReadMultipleRegistersResponse) tran.getResponse();
                     rr.getCaller().processReadResponse(res, rr.getReference(), rr.getCount());
                     lock = true;
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(GCBus.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (ModbusSlaveException ex) {
-                    Logger.getLogger(GCBus.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (ModbusException ex) {
+                } catch (InterruptedException | ModbusException ex) {
+                    System.out.println("Again Request for Reading");
+                    addReadRequest(rr);
                     Logger.getLogger(GCBus.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
@@ -182,9 +182,10 @@ public class GCBus {
     }
 
     private class WriteQueueTask extends TimerTask {
+
         @Override
         public void run() {
-            
+
             if (con == null) {
                 return;
             }
@@ -229,6 +230,5 @@ public class GCBus {
 
     public GCBus() {
     }
-    
-    
+
 }

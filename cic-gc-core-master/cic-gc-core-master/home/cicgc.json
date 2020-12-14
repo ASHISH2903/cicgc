@@ -2,7 +2,7 @@
     {
         "busName": "dtc",
         "portName": "/dev/ttyUSB0",
-        "baudRate": 19200,
+        "baudRate": 9600,
         "dataBits": 8,
         "stopBits": 1,
         "parity": "none",
@@ -11,19 +11,18 @@
         "devices": [
             {
                 "deviceName": "dtc1",
-                "slaveAddress": 3,
-                "deviceFields": [
-                    
+                "slaveAddress": 1,
+                "deviceFields": [                   
                             {
                                 "registerNo": 4096,
                                 "registerName": "Process Value",
-                                "tcpRegisterNo": 1,
+                                "tcpRegisterNo": 0,
                                 "tcpWritable": false
                             },
                             {
                                 "registerNo": 4097,
                                 "registerName": "Set Point",
-                                "tcpRegisterNo": 2,
+                                "tcpRegisterNo": 1,
                                 "tcpWritable": true
                             },
                             {
@@ -37,6 +36,7 @@
                             {
                                 "registerNo": 4100,
                                 "registerName": "Input Temperature Sensor Type"
+								
                             },
                             {
                                 "registerNo": 4101,
@@ -50,7 +50,6 @@
                                 "registerNo": 4103,
                                 "registerName": "2nd Group Of Heating/Cooling Control Cycle"
                             }
-                     
                 ],
                 "deviceFetchers": [
 					{
@@ -62,19 +61,18 @@
             },
             {
                 "deviceName": "dtc2",
-                "slaveAddress": 4,
+                "slaveAddress": 2,
                 "deviceFields": [
-
                             {
                                 "registerNo": 4096,
                                 "registerName": "Process Value",
-                                "tcpRegisterNo": 3,
+                                "tcpRegisterNo": 2,
                                 "tcpWritable": false
                             },
                             {
                                 "registerNo": 4097,
                                 "registerName": "Set Point",
-                                "tcpRegisterNo": 4,
+                                "tcpRegisterNo": 3,
                                 "tcpWritable": true
                             },
                             {
@@ -88,24 +86,34 @@
                             {
                                 "registerNo": 4100,
                                 "registerName": "Input Temperature Sensor Type"
+								
                             },
                             {
                                 "registerNo": 4101,
                                 "registerName": "Control Method"
+								
                             },
                             {
                                 "registerNo": 4102,
-                                "registerName": "1st Group Of Heating/Cooling Control Cycle"
+                                "registerName": "1st Group Of Heating/Cooling Control Cycle",
+								"tcpRegisterNo": 4,
+                                "tcpWritable": false
                             },
                             {
                                 "registerNo": 4103,
-                                "registerName": "2nd Group Of Heating/Cooling Control Cycle"
-                            }
-                    
+                                "registerName": "2nd Group Of Heating/Cooling Control Cycle",
+								"tcpRegisterNo": 5,
+                                "tcpWritable": false
+                            }                   
                 ],
                 "deviceFetchers": [
 					{
                             "referenceNo": 4096,
+                            "totalCount": 2,
+                            "fetchPeriod": 50
+                    },
+					{
+                            "referenceNo": 4102,
                             "totalCount": 2,
                             "fetchPeriod": 50
                     }
@@ -125,26 +133,24 @@
             {
                 "deviceName": "isaw1",
                 "slaveAddress": 1,
-                "deviceFields": [
-                
+                "deviceFields": [               
                             {
                                 "registerNo": 418,
                                 "registerName": "Temp 1",
-                                "tcpRegisterNo": 5,
+                                "tcpRegisterNo": 6,
                                 "tcpWritable": true
                             },
                             {
                                 "registerNo": 419,
                                 "registerName": "Temp 2",
-                                "tcpRegisterNo": 6,
+                                "tcpRegisterNo": 7,
                                 "tcpWritable": true
-                            }
-                    
+                            }                   
                 ],
                 "deviceFetchers": [
                     {
                             "referenceNo": 418,
-                            "totalCount": 1,
+                            "totalCount": 2,
                             "fetchPeriod": 45
                     
                     }

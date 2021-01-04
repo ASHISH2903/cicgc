@@ -7,7 +7,8 @@
 	"parity": "even",
 	"readQueueProcessTime": 30,
 	"writeQueueProcessTime": 1,
-	"devices": [{
+	"devices": 
+	[{
 			"deviceName": "dtc1",
 			"slaveAddress": 1,
 			"deviceFields": [{
@@ -197,7 +198,6 @@
 			"deviceName": "dtc5",
 			"slaveAddress": 5,
 			"deviceFields": [
-
 				{
 					"registerNo": 4096,
 					"registerName": "Process Value",

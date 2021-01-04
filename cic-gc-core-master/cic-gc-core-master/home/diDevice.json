@@ -1,0 +1,21 @@
+[{
+		"doSequence": 1,
+		"diAddress": 32,
+		"diSize": 8
+	},
+	{
+		"doSequence": 2,
+		"diAddress": 33,
+		"diSize": 8
+	},
+	{
+		"doSequence": 3,
+		"diAddress": 34,
+		"diSize": 8
+	},
+	{
+		"doSequence": 4,
+		"diAddress": 35,
+		"diSize": 8
+	}
+]

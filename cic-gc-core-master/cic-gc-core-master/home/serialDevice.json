@@ -1,0 +1,182 @@
+[{
+	"busName": "dtc",
+	"portName": "/dev/ttyUSB0",
+	"baudRate": 9600,
+	"dataBits": 8,
+	"stopBits": 1,
+	"parity": "none",
+	"readQueueProcessTime": 30,
+	"writeQueueProcessTime": 1,
+	"serialDevices": [{
+			"deviceName": "dtc1",
+			"slaveAddress": 1,
+			"registers": [{
+					"registerAddress": 4096,
+					"registerName": "Process Value"
+				},
+				{
+					"registerAddress": 4097,
+					"registerName": "Set Point"
+				}
+			],
+			"deviceFetchers": [{
+				"referenceNo": 4096,
+				"totalCount": 2,
+				"fetchPeriod": 50
+			}]
+		},
+		{
+			"deviceName": "dtc2",
+			"slaveAddress": 2,
+			"registers": [
+
+				{
+					"registerAddress": 4096,
+					"registerName": "Process Value"
+				},
+				{
+					"registerAddress": 4097,
+					"registerName": "Set Point"
+				}
+			],
+			"deviceFetchers": [{
+				"referenceNo": 4096,
+				"totalCount": 2,
+				"fetchPeriod": 50
+			}]
+		},
+		{
+			"deviceName": "dtc3",
+			"slaveAddress": 3,
+			"registers": [{
+					"registerAddress": 4096,
+					"registerName": "Process Value"
+				},
+				{
+					"registerAddress": 4097,
+					"registerName": "Set Point"
+				}
+			],
+			"deviceFetchers": [{
+				"referenceNo": 4096,
+				"totalCount": 2,
+				"fetchPeriod": 50
+			}]
+		},
+		{
+			"deviceName": "dtc4",
+			"slaveAddress": 4,
+			"registers": [{
+					"registerAddress": 4096,
+					"registerName": "Process Value"
+				},
+				{
+					"registerAddress": 4097,
+					"registerName": "Set Point"
+				}
+			],
+			"deviceFetchers": [{
+				"referenceNo": 4096,
+				"totalCount": 2,
+				"fetchPeriod": 50
+			}]
+		},
+		{
+			"deviceName": "dtc5",
+			"slaveAddress": 5,
+			"registers": [{
+					"registerAddress": 4096,
+					"registerName": "Process Value"
+				},
+				{
+					"registerAddress": 4097,
+					"registerName": "Set Point"
+				}
+			],
+			"deviceFetchers": [{
+				"referenceNo": 4096,
+				"totalCount": 2,
+				"fetchPeriod": 50
+			}]
+		}
+	]
+}, {
+	"busName": "epc",
+	"portName": "/dev/ttyUSB1",
+	"baudRate": 9600,
+	"dataBits": 8,
+	"stopBits": 1,
+	"parity": "none",
+	"readQueueProcessTime": 30,
+	"writeQueueProcessTime": 1,
+	"serialDevices": [{
+		"deviceName": "epc",
+		"slaveAddress": 20,
+		"registers": [{
+				"registerAddress": 0,
+				"registerName": "Process Value 0"
+			},
+			{
+				"registerAddress": 1,
+				"registerName": "Process Value 1"
+			},
+			{
+				"registerAddress": 2,
+				"registerName": "Process Value 2"
+			},
+			{
+				"registerAddress": 8,
+				"registerName": "Set Value 0"
+			},
+			{
+				"registerAddress": 9,
+				"registerName": "Set Value 1"
+			},
+			{
+				"registerAddress": 10,
+				"registerName": "Set Value 2"
+			}
+		],
+		"deviceFetchers": [{
+			"referenceNo": 0,
+			"totalCount": 3,
+			"fetchPeriod": 45
+		}, {
+			"referenceNo": 8,
+			"totalCount": 3,
+			"fetchPeriod": 45
+		}]
+	}]
+}, {
+	"busName": "fid",
+	"portName": "/dev/ttyUSB2",
+	"baudRate": 9600,
+	"dataBits": 8,
+	"stopBits": 1,
+	"parity": "none",
+	"readQueueProcessTime": 30,
+	"writeQueueProcessTime": 1,
+	"serialDevices": [{
+		"deviceName": "fid",
+		"slaveAddress": 15,
+		"registers": [{
+				"registerAddress": 0,
+				"registerName": "AMPLIFICATION"
+			},
+			{
+				"registerAddress": 1,
+				"registerName": "SENSITIVITY"
+			},
+			{
+				"registerAddress": 2,
+				"registerName": "OFFSET"
+			}
+		],
+		"deviceFetchers": [{
+			"referenceNo": 0,
+			"totalCount": 3,
+			"fetchPeriod": 45
+
+		}]
+	}]
+}]

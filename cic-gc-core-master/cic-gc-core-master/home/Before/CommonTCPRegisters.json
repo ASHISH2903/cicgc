@@ -1,0 +1,163 @@
+[
+	{
+		"tcpRegisterNo": 0,
+		"slaveAddress": 1,
+		"devices": {		
+			"deviceName": "dtc1",
+			"registerNo": 4096,
+			"registerName": "Process Value",
+			"tcpWritable": false
+		},
+		"deviceFetchers": [{
+			"referenceNo": 0,
+			"totalCount": 1,
+			"fetchPeriod": 45
+
+		}]
+	{
+		"tcpRegisterNo": 1,
+		"deviceName": "dtc1",
+		"slaveAddress": 1,
+		"registerNo": 4097,
+		"registerName": "Set Point",
+		"tcpWritable": true
+	},
+	{
+		"tcpRegisterNo": 2,
+		"deviceName": "dtc2",
+		"slaveAddress": 2,
+		"registerNo": 4096,
+		"registerName": "Process Value",
+		"tcpWritable": false
+	},
+	{
+		"tcpRegisterNo": 3,
+		"deviceName": "dtc2",
+		"slaveAddress": 2,
+		"registerNo": 4097,
+		"registerName": "Set Point",
+		"tcpWritable": true
+	},
+	{
+		"tcpRegisterNo": 4,
+		"deviceName": "dtc3",
+		"slaveAddress": 3,
+		"registerNo": 4096,
+		"registerName": "Process Value",
+		"tcpWritable": false
+	},
+	{
+		"tcpRegisterNo": 5,
+		"deviceName": "dtc3",
+		"slaveAddress": 3,
+		"registerNo": 4097,
+		"registerName": "Set Point",
+		"tcpWritable": true
+	},
+	{
+		"tcpRegisterNo": 6,
+		"deviceName": "dtc4",
+		"slaveAddress": 4,
+		"registerNo": 4096,
+		"registerName": "Process Value",
+		"tcpWritable": false
+	},
+	{
+		"tcpRegisterNo": 7,
+		"deviceName": "dtc4",
+		"slaveAddress": 4,
+		"registerNo": 4097,
+		"registerName": "Set Point",
+		"tcpWritable": true
+	},
+	{
+		"tcpRegisterNo": 8,
+		"deviceName": "dtc5",
+		"slaveAddress": 5,
+		"registerNo": 4096,
+		"registerName": "Process Value",
+		"tcpWritable": false
+	},
+	{
+		"tcpRegisterNo": 9,
+		"deviceName": "dtc5",
+		"slaveAddress": 5,
+		"registerNo": 4097,
+		"registerName": "Set Point",
+		"tcpWritable": true
+	},
+	{
+		"tcpRegisterNo": 17,
+		"deviceName": "epc",
+		"slaveAddress": 20,
+		"registerNo": 0,
+		"registerName": "Process Value 0",
+		"tcpWritable": false
+	},
+	{
+		"tcpRegisterNo": 19,
+		"deviceName": "epc",
+		"slaveAddress": 20,
+		"registerNo": 1,
+		"registerName": "Process Value 1",
+		"tcpWritable": false
+	},
+	{
+		"tcpRegisterNo": 21,
+		"deviceName": "epc",
+		"slaveAddress": 20,
+		"registerNo": 2,
+		"registerName": "Process Value 2",
+		"tcpWritable": false
+	},
+	{
+		"tcpRegisterNo": 18,
+		"deviceName": "epc",
+		"slaveAddress": 20,
+		"registerNo": 8,
+		"registerName": "Set Value 0",
+		"tcpWritable": true
+	},
+	{
+		"tcpRegisterNo": 20,
+		"deviceName": "epc",
+		"slaveAddress": 20,
+		"registerNo": 9,
+		"registerName": "Set Value 1",
+		"tcpWritable": true
+	},
+	{
+		"tcpRegisterNo": 22,
+		"deviceName": "epc",
+		"slaveAddress": 20,
+		"registerNo": 10,
+		"registerName": "Set Value 2",
+		"tcpWritable": true
+	},
+	{
+		"tcpRegisterNo": 33,
+		"deviceName": "fid",
+		"slaveAddress": 15,
+		"registerNo": 0,
+		"registerName": "AMPLIFICATION",
+		"tcpWritable": true
+	},
+	{
+		"tcpRegisterNo": 34,
+		"deviceName": "fid",
+		"slaveAddress": 15,
+		"registerNo": 1,
+		"registerName": "SENSITIVITY",
+		"doNumber": 1,
+		"doAddress": 32,
+		"tcpWritable": true
+	},
+	{
+		"tcpRegisterNo": 35,
+		"deviceName": "fid",
+		"slaveAddress": 15,
+		"registerNo": 2,
+		"registerName": "OFFSET",
+		"tcpWritable": true
+	},
+]

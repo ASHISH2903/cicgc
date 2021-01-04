@@ -1,0 +1,455 @@
+[{
+		"tcpAddress": 1,
+		"deviceData": true,
+		"deviceName": "dtc1",
+		"deviceRegisterName": "Process Value",
+		"readOnly": true,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 2,
+		"deviceData": true,
+		"deviceName": "dtc1",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 3,
+		"deviceData": true,
+		"deviceName": "dtc2",
+		"deviceRegisterName": "Process Value",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 4,
+		"deviceData": true,
+		"deviceName": "dtc2",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 5,
+		"deviceData": true,
+		"deviceName": "dtc3",
+		"deviceRegisterName": "Process Value",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 6,
+		"deviceData": true,
+		"deviceName": "dtc3",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 7,
+		"deviceData": true,
+		"deviceName": "dtc4",
+		"deviceRegisterName": "Process Value",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 8,
+		"deviceData": true,
+		"deviceName": "dtc4",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 9,
+		"deviceData": true,
+		"deviceName": "dtc5",
+		"deviceRegisterName": "Process Value",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 10,
+		"deviceData": true,
+		"deviceName": "dtc5",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 10,
+		"deviceData": true,
+		"deviceName": "dtc5",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 11,
+		"deviceData": true,
+		"deviceName": "dtc6",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 12,
+		"deviceData": true,
+		"deviceName": "dtc6",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 13,
+		"deviceData": true,
+		"deviceName": "dtc7",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 14,
+		"deviceData": true,
+		"deviceName": "dtc7",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 15,
+		"deviceData": true,
+		"deviceName": "dtc8",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 16,
+		"deviceData": true,
+		"deviceName": "dtc8",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 17,
+		"deviceData": true,
+		"deviceName": "epc",
+		"deviceRegisterName": "Process Value 0",
+		"readOnly": true,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 18,
+		"deviceData": true,
+		"deviceName": "epc",
+		"deviceRegisterName": "Set Value 0",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 19,
+		"deviceData": true,
+		"deviceName": "epc",
+		"deviceRegisterName": "Process Value 1",
+		"readOnly": true,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 20,
+		"deviceData": true,
+		"deviceName": "epc",
+		"deviceRegisterName": "Set Value 1",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 21,
+		"deviceData": true,
+		"deviceName": "epc",
+		"deviceRegisterName": "Process Value 2",
+		"readOnly": true,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 22,
+		"deviceData": true,
+		"deviceName": "epc",
+		"deviceRegisterName": "Set Value 2",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 33,
+		"deviceData": true,
+		"deviceName": "fid",
+		"deviceRegisterName": "AMPLIFICATION",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 34,
+		"deviceData": true,
+		"deviceName": "fid",
+		"deviceRegisterName": "SENSITIVITY",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": true,
+		"doOperation": [{
+				"value": 1,
+				"set": [1],
+				"Name": "LOW",
+				"reset": [2]
+			},
+			{
+				"value": 2,
+				"set": [2],
+				"Name": "HIGH",
+				"reset": [1]
+			}
+		]
+	},
+	{
+		"tcpAddress": 35,
+		"deviceData": true,
+		"deviceName": "fid",
+		"deviceRegisterName": "OFFSET",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 36,
+		"deviceData": true,
+		"deviceName": "tcd",
+		"deviceRegisterName": "SENSITIVITY",
+		"readOnly": false,
+		"diOperated": true,
+		"diOperation": [{
+			"diNo": 1
+		}],
+		"doOperated": true,
+		"doOperation": [{
+				"value": 1,
+				"set": [1],
+				"Name": "LOW",
+				"reset": [2, 3]
+			},
+			{
+				"value": 2,
+				"set": [2],
+				"Name": "MEDIUM",
+				"reset": [1, 3]
+			},
+			{
+				"value": 2,
+				"set": [3],
+				"Names": "HIGH",
+				"reset": [1, 2]
+			}
+		]
+	},
+	{
+		"tcpAddress": 39,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": true,
+		"doOperation": [{
+			"value": 4,
+			"set": [4],
+			"Name": "GSV A"
+		}]
+	},
+	{
+		"tcpAddress": 40,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": true,
+		"doOperation": [{
+			"value": 4,
+			"set": [4],
+			"Name": "GSV A"
+		}]
+	},
+	{
+		"tcpAddress": 41,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": true,
+		"doOperation": [{
+			"value": 4,
+			"set": [4],
+			"Name": "GSV A"
+		}]
+	}
+	,
+	{
+		"tcpAddress": 42,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": true,
+		"doOperation": [{
+			"value": 4,
+			"set": [4],
+			"Name": "GSV A"
+		}]
+	},
+	{
+		"tcpAddress": 43,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": true,
+		"doOperation": [{
+			"value": 4,
+			"set": [4],
+			"Name": "GSV A"
+		}]
+	},
+	{
+		"tcpAddress": 44,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": true,
+		"doOperation": [{
+			"value": 4,
+			"set": [4],
+			"Name": "GSV A"
+		}]
+	},
+	{
+		"tcpAddress": 45,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": true,
+		"doOperation": [{
+			"value": 4,
+			"set": [4],
+			"Name": "GSV A"
+		}]
+	},
+	{
+		"tcpAddress": 46,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": true,
+		"doOperation": [{
+			"value": 4,
+			"set": [4],
+			"Name": "GSV A"
+		}]
+	},
+	{
+		"tcpAddress": 47,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": true,
+		"doOperation": [{
+			"value": 4,
+			"set": [4],
+			"Name": "GSV A"
+		}]
+	},
+	{
+		"tcpAddress": 48,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": true,
+		"doOperation": [{
+			"value": 4,
+			"set": [4],
+			"Name": "GSV A"
+		}]
+	},
+	{
+		"tcpAddress": 49,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": true,
+		"doOperation": [{
+			"value": 4,
+			"set": [4],
+			"Name": "GSV A"
+		}]
+	},
+	{
+		"tcpAddress": 50,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": true,
+		"doOperation": [{
+			"value": 4,
+			"set": [4],
+			"Name": "GSV A"
+		}]
+	},
+	{
+		"tcpAddress": 51,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": true,
+		"diOperation": [{
+			"diNo": 2
+		}],
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 52,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": true,
+		"diOperation": [{
+			"diNo": 3
+		}],
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 53,
+		"deviceData": false,
+		"readOnly": false,
+		"diOperated": true,
+		"diOperation": [{
+			"diNo": 4
+		}],
+		"doOperated": false
+	}
+	
+]

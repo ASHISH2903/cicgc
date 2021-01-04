@@ -1,0 +1,52 @@
+[{
+		"tcpRegisterNo": 0,
+		"serialDevice": [{
+			"slaveAddress": 1,
+			"deviceName": "dtc1",
+			"registerNo": 4096,
+			"registerName": "Process Value",
+			"tcpWritable": false,
+			"referenceNo": 0,
+			"totalCount": 1,
+			"fetchPeriod": 45
+		}],
+		"DOModule":[{
+			"doNumber": 0,
+			"doAddress": 0
+		}]
+	},
+	{
+		"tcpRegisterNo": 2,
+		"serialDevice": [{
+			"slaveAddress": 1,
+			"deviceName": "dtc1",
+			"registerNo": 4097,
+			"registerName": "Process Value",
+			"tcpWritable": true,
+			"referenceNo": 0,
+			"totalCount": 1,
+			"fetchPeriod": 45
+		}],
+		"DOModule":[{
+			"doNumber": 0,
+			"doAddress": 0
+		}]
+	},
+	{
+		"tcpRegisterNo": 3,
+		"serialDevice": [{
+			"slaveAddress": 2,
+			"deviceName": "dtc2",
+			"registerNo": 4096,
+			"registerName": "Process Value",
+			"tcpWritable": false,
+			"referenceNo": 0,
+			"totalCount": 1,
+			"fetchPeriod": 45
+		}],
+		"DOModule":[{
+			"doNumber": 0,
+			"doAddress": 0
+		}]
+	}
+]

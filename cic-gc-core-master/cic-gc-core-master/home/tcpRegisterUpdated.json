@@ -1,0 +1,146 @@
+[
+	{
+		"tcpAddress": 1,
+		"deviceData": true,
+		"deviceName": "dtc1",
+		"deviceRegisterName": "Process Value",
+		"readOnly": true,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 2,
+		"deviceData": true,
+		"deviceName": "dtc1",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 3,
+		"deviceData": true,
+		"deviceName": "dtc2",
+		"deviceRegisterName": "Process Value",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 4,
+		"deviceData": true,
+		"deviceName": "dtc2",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 5,
+		"deviceData": true,
+		"deviceName": "dtc3",
+		"deviceRegisterName": "Process Value",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 6,
+		"deviceData": true,
+		"deviceName": "dtc3",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 7,
+		"deviceData": true,
+		"deviceName": "dtc4",
+		"deviceRegisterName": "Process Value",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 8,
+		"deviceData": true,
+		"deviceName": "dtc4",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 9,
+		"deviceData": true,
+		"deviceName": "dtc5",
+		"deviceRegisterName": "Process Value",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 10,
+		"deviceData": true,
+		"deviceName": "dtc5",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 11,
+		"deviceData": true,
+		"deviceName": "dtc6",
+		"deviceRegisterName": "Process Value",
+		"readOnly": true,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 12,
+		"deviceData": true,
+		"deviceName": "dtc6",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 13,
+		"deviceData": true,
+		"deviceName": "dtc7",
+		"deviceRegisterName": "Process Value",
+		"readOnly": true,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 14,
+		"deviceData": true,
+		"deviceName": "dtc7",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 15,
+		"deviceData": true,
+		"deviceName": "dtc8",
+		"deviceRegisterName": "Process Value",
+		"readOnly": true,
+		"diOperated": false,
+		"doOperated": false
+	},
+	{
+		"tcpAddress": 16,
+		"deviceData": true,
+		"deviceName": "dtc8",
+		"deviceRegisterName": "Set Point",
+		"readOnly": false,
+		"diOperated": false,
+		"doOperated": false
+	},
+]

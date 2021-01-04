@@ -5,12 +5,13 @@
  */
 package cic.gc;
 
-import cic.gc.DO.DOModule;
+import cic.gc.util.DoModule;
 import cic.gc.serial.GCBus;
 import cic.gc.util.Repo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
+import java.util.Timer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import suyojancommon.Config;
@@ -32,7 +33,6 @@ public class CICGC {
             String path = Config.getHomePath();
             path += File.separator;
             path += Config.argValues.get("busconfig");
-            //String ipPath = path+= Config.argValues.get("ipconfig");
             ObjectMapper mapper = new ObjectMapper();
             GCBus buses[];
 
@@ -54,43 +54,38 @@ public class CICGC {
             path += File.separator;
             path += Config.argValues.get("i2cconfig");
 
-            
-            // For DO Module
-            DOModule doModuleTest[];
-            which = 7;
-            rem = which % 8;
-            quo = which / 8;
-            doModuleTest = mapper.readValue(new File(path), DOModule[].class);
-            for (int i = 0; i < doModuleTest.length; i++) {
-                System.out.println(doModuleTest[i].toString());
-                if (doModuleTest[i].checkI2C()) {
-                    switch (quo) {
-                        case 0:
-                            doModuleTest[quo].setBit(rem, quo);
-                            break;
-                        case 1:
-                            doModuleTest[quo].setBit(rem, quo);
-                            break;
-                        case 2:
-                            doModuleTest[quo].resetBit(rem, quo);
-                            break;
-                        case 3:
-                            doModuleTest[quo].resetBit(rem, quo);
-                            break;
-                        default:
-                            System.out.println("Value can not be greater than 31..");
-                            break;
-                    }
-                }
-            }
-            
-            for(int i=0;i<doModuleTest.length;i++){
-                doModuleTest[i].seeStatus(i);
+            DoModule myModule[];
+            myModule = mapper.readValue(new File(path), DoModule[].class);
+            for (int i = 0; i < myModule.length; i++) {
+               // System.out.println("..............................." + i + "...............");
+               // System.out.println("Data : " + myModule[i].toString());
+                DoModule doModule = myModule[i];
+                doModule.I2Cinit();
             }
 
         } catch (IOException ex) {
+            Logger.getLogger(CICGC.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
             Logger.getLogger(CICGC.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
 }
+
+/*which = 15;
+            rem = which % 8;
+            quo = which / 8;
+            switch (quo) {
+                case 0:
+                    myModule[quo].i2cdata(myModule[quo].getAddress(), quo, rem);
+                    break;
+                case 1:
+                    myModule[quo].i2cdata(myModule[quo].getAddress(), quo, rem);
+                    break;
+                case 2:
+                    myModule[quo].i2cdata(myModule[quo].getAddress(), quo, rem);
+                    break;
+                case 3:
+                    myModule[quo].i2cdata(myModule[quo].getAddress(), quo, which);
+                    break;
+            }*/

@@ -5,7 +5,8 @@
  */
 package cic.gc;
 
-import cic.gc.util.DoModule;
+import cic.gc.dido.drivers.DiDriver;
+import cic.gc.dido.drivers.DoDriver;
 import cic.gc.serial.GCBus;
 import cic.gc.util.Repo;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -16,15 +17,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import suyojancommon.Config;
 
-/**
- *
- * @author prera
- */
 public class CICGC {
 
-    /**
-     * @param args the command line arguments
-     */
     static int which, rem, quo, choice;
 
     public static void main(String[] args) {
@@ -50,19 +44,8 @@ public class CICGC {
             // run the tcp server only after the tcp registers are innitialized
             //Repo.create().getTcpServer(path);
 
-            path = Config.getHomePath();
-            path += File.separator;
-            path += Config.argValues.get("i2cconfig");
-
-            DoModule myModule[];
-            myModule = mapper.readValue(new File(path), DoModule[].class);
-            for (int i = 0; i < myModule.length; i++) {
-               // System.out.println("..............................." + i + "...............");
-               // System.out.println("Data : " + myModule[i].toString());
-                DoModule doModule = myModule[i];
-                doModule.I2Cinit();
-            }
-
+            //DoDriver doDriver = new DoDriver();
+            DoDriver doDriver = new DoDriver();
         } catch (IOException ex) {
             Logger.getLogger(CICGC.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {

@@ -1,10 +1,19 @@
-package cic.gc.DO.device;
+package cic.gc.dido;
 
-import cic.gc.DO.library.I2C;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import cic.gc.library.I2C;
 
+/**
+ * Created by jocole on 7/18/2016.
+ */
 public class Device {
+
     private Integer _address;
 
+    public Device() {
+    }
+
+    
     public Device(Integer address) throws Exception {
         _address = address;
         initialize();

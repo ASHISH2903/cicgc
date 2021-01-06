@@ -1,15 +1,18 @@
-package cic.gc.DO.library;
+package cic.gc.library;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+/**
+ * Created by jocole on 7/18/2016.
+ */
 public class I2C {
 
     private static String getExecString(String command, String[] args) {
         StringBuilder result = new StringBuilder();
         result.append(command);
         result.append(" ");
-        for(String arg : args) {
+        for (String arg : args) {
             result.append(arg);
             result.append(" ");
         }
@@ -55,7 +58,7 @@ public class I2C {
 
         try {
             Runtime.getRuntime().exec(getExecString(cmdText, args));
-        } catch( Exception err) {
+        } catch (Exception err) {
             // Sometimes an error happens because of a bug in the i2c device drivers.
             // Retry after calling i2cdetect (because that fixes it for some reason).
             // But only retry once.
@@ -87,7 +90,7 @@ public class I2C {
         };
 
         if (options.equals("skip")) {
-            args = new String[] {
+            args = new String[]{
                 "-y",
                 "1",
                 "" + address
@@ -102,12 +105,12 @@ public class I2C {
                     new InputStreamReader(proc.getInputStream())
             );
 
-            while((line = input.readLine()) != null) {
+            while ((line = input.readLine()) != null) {
                 result.append(line);
             }
             input.close();
             return Integer.parseInt(getIntegerString(result.toString()), 16);
-        } catch ( Exception err) {
+        } catch (Exception err) {
             return -1;
         }
     }
